@@ -23,13 +23,11 @@ const Select = styled.select`
 
 const useCriptomoneda = (label, stateInicial, opciones) => {
 
-    console.log(opciones);
-
     //State custom hook
     const [state, actualizarState] = useState(stateInicial);
 
     const SelectCripto = () => {
-        if (state === '' || state.length === 0) return null;
+        if (opciones === '' || opciones.length === 0) return null;
         return (
             <Fragment>
                 <Label>{label}</Label>
