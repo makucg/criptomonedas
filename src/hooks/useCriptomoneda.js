@@ -27,7 +27,7 @@ const useCriptomoneda = (label, stateInicial, opciones) => {
     const [state, actualizarState] = useState(stateInicial);
 
     const SelectCripto = () => {
-        if (opciones === '' || opciones.length === 0) return null;
+        //if (opciones === '' || opciones.length === 0) return null;
         return (
             <Fragment>
                 <Label>{label}</Label>
@@ -38,7 +38,7 @@ const useCriptomoneda = (label, stateInicial, opciones) => {
                     <option value=''>-- Seleccione --</option>
                     {
                         opciones.map(opcion => (
-                            <option key={opcion.Id} value={opcion.Id}>{opcion.FullName}</option>
+                            <option key={opcion.CoinInfo.Id} value={opcion.CoinInfo.Name}>{opcion.CoinInfo.FullName}</option>
                         ))
                     }
                 </Select>
